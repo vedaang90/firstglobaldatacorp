@@ -1,7 +1,13 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
--->
+﻿<?php $name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
+$formcontent="From: $name \n Message: $message";
+$recipient = "ved-win@protonmail.com";
+$subject = "Contact Form";
+$mailheader = "From: $email \r\n";
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!";
+?>
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +15,8 @@ Author URL: http://w3layouts.com
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Advisory a Corporate Category Bootstrap Responsive Website Template - Contact : W3Layouts</title>
+<link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">    
+<title>First Global Data Corp | Contact</title>
     <!--/google-fonts-->
     <link href="//fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,300;1,500&display=swap"
         rel="stylesheet">
@@ -27,11 +34,11 @@ Author URL: http://w3layouts.com
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke px-0">
                 <h1> <a class="navbar-brand" href="index.html">
-                        <span class="hny-log">A</span>dvisory
+                        First Global Data Corp
                     </a></h1>
                 <!-- if logo is image enable this   
     <a class="navbar-brand" href="#index.html">
-        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+        <img src="assets/logo.png" alt="FGDC" title="FGDC" style="height:35px;" />
     </a> -->
                 <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -53,45 +60,16 @@ Author URL: http://w3layouts.com
                         </li>
                        
                         <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="index.html">Vision</a>
                         </li>
-                        <!--/search-right-->
-                        <div class="search-right">
-                            <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
-                            <!-- search popup -->
-                            <div id="search" class="pop-overlay">
-                                <div class="popup">
-
-                                    <form action="error.html" method="GET" class="search-box">
-                                        <input type="search" placeholder="Enter Keyword" name="search"
-                                            required="required" autofocus="">
-                                        <button type="submit" class="btn"><span class="fa fa-search"
-                                                aria-hidden="true"></span></button>
-                                    </form>
-
-                                </div>
-                                <a class="close" href="#close">×</a>
-                            </div>
-                            <!-- /search popup -->
-                        </div>
-                        <!--//search-right-->
-                    </ul>
-                </div>
-                <!-- toggle switch for light and dark theme -->
-                <div class="cont-ser-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
-                                <input type="checkbox" id="checkbox">
-                                <div class="mode-container">
-                                    <i class="gg-sun"></i>
-                                    <i class="gg-moon"></i>
-                                </div>
-                            </label>
-                        </div>
-                    </nav>
-                </div>
-                <!-- //toggle switch for light and dark theme -->
+ <li class="nav-item active">
+                            <a class="nav-link" href="team.html">Careers</a>
+                        </li>
+ <li class="nav-item active">
+                            <a class="nav-link" href="contact.php">Contact</a>
+                        </li>                        
+<!--/search-right-->
+                        
             </nav>
         </div>
     </header>
@@ -118,7 +96,7 @@ Author URL: http://w3layouts.com
                             <h3 class="hny-title mb-4">Find Us</h3>
                             <div class="separatorhny"></div>
                             <p class="mb-sm-5 mb-4">Start working with Us that can provide everything you need to
-                                generate awareness,
+                                generate leads,
                                 drive traffic,
                                 connect. <br> We guarantee that you’ll be able to have any issue resolved within 24
                                 hours.</p>
@@ -139,7 +117,7 @@ Author URL: http://w3layouts.com
                             </div>
                             <div class="cont-right">
                                 <h6>Send Email</h6>
-                                <p><a href="mailto:advisory@mail.com" class="mail">advisory@mail.com</a></p>
+                                <p><a href="mailto:info@firstglobaldatacorp.com" class="mail">info@firstglobaldatacorp.com</a></p>
                             </div>
                         </div>
                         <div class="cont-top margin-up">
@@ -148,7 +126,7 @@ Author URL: http://w3layouts.com
                             </div>
                             <div class="cont-right">
                                 <h6>Office Address</h6>
-                                <p class="pr-lg-5">Address here, 434 Trainer Honey street, London, UK - 62617.</p>
+                                <p class="pr-lg-5"> First Global Data Corp,LLC ,1712 Pioneer Ave, Suite 872 , Cheyenne, Wyoming 82001, United States</p>
                             </div>
                         </div>
                     </div>
@@ -158,21 +136,17 @@ Author URL: http://w3layouts.com
                                 <h4 class="sub-titlehny">Contact Us</h4>
                                 <h3 class="hny-title mx-0 mb-4 text-left">Fill out the form.</h3>
                                 <div class="separatorhny"></div>
-                                <p class="mb-sm-5 mb-4">Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
-                                    consectetur adipisicing.</p>
+                                <p class="mb-sm-5 mb-4">Our Helpful and Interactive Team will get back to you as soon as possible!</p>
                             </div>
-                            <form action="https://sendmail.w3layouts.com/submitForm" method="post">
+                            <form action="" method="post">
                                 <div class="twice-two">
-                                    <input type="text" class="form-control" name="w3lName" id="w3lName"
+                                    <input type="text" class="form-control" name="w3lName" id="name"
                                         placeholder="Name" required="">
-                                    <input type="email" class="form-control" name="w3lSender" id="w3lSender"
+                                    <input type="email" class="form-control" name="w3lSender" id="email"
                                         placeholder="Email" required="">
                                 </div>
-                                <div class="twice">
-                                    <input type="text" class="form-control" name="w3lSubject" id="w3lSubject"
-                                        placeholder="Subject" required="">
-                                </div>
-                                <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
+                                
+                                <textarea name="w3lMessage" class="form-control" id="message" placeholder="Message"
                                     required=""></textarea>
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
@@ -181,10 +155,7 @@ Author URL: http://w3layouts.com
                         </div>
                     </div>
                 </div>
-                <div class="map-iframe">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
-                        width="100%" height="400" frameborder="0" style="border: 0px;" allowfullscreen=""></iframe>
+                <div class="map-iframe"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.0607979570345!2d-104.82095208427856!3d41.13319871967665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876f3ac107440001%3A0x6f90c2d9c91f96fe!2sFirst%20Global%20Data%20Corp!5e0!3m2!1sen!2sin!4v1620020298186!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
 
             </div>
@@ -198,55 +169,43 @@ Author URL: http://w3layouts.com
                 <div class="row footer-top-29">
                     <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-1 pr-lg-5">
                         <div class="footer-logo mb-3">
-                            <a class="navbar-brand" href="index.html">Advisory</a>
+                            <a class="navbar-brand" href="index.html">First Global Data Corp</a>
                         </div>
-                        <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at
-                            tempufddfel. Lorem ipsum dolor sit amet Semper at elit.</p>
+                        <p>FGDC as an organization has successfully garnered ample business for itself and clients alike through undertaking transparent tasks and consistent implementation of feedbacks. As an organization, we ensure that we build our craft as we journey towards success never forgetting our roots and values along the way.</p>
                         <div class="main-social-footer-29 mt-4">
-                            <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                            <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                            <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                            <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                            <a href="https://www.facebook.com/pages/category/Media-News-Company/First-Global-Data-Corp-209592323177218/" class="facebook"><span class="fa fa-facebook"></span></a>
+                            <a href="https://www.linkedin.com/company/first-global-data-corp/about/" class="linkedin"><span class="fa fa-linkedin"></span></a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-2 mt-sm-0 mt-5">
 
                         <ul>
-                            <h6 class="footer-title-29">Usefull Links</h6>
+                            <h6 class="footer-title-29">Quick Links</h6>
                             <li><a href="about.html">About Us</a></li>
-                            <li><a href="blog.html"> Blog posts</a></li>
-                            <li><a href="#pricing"> Pricing plans</a></li>
-                            <li><a href="#careers"> Careers</a></li>
+                            <li><a href="contact.php"> Get a Quote</a></li>
+                            <li><a href="team.html/#subscribe"> Careers</a></li>
                             <li><a href="services.html">Services</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="contact.php">Contact us</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-6 col-sm-5 col-6 footer-list-29 footer-3 mt-lg-0 mt-5">
                         <h6 class="footer-title-29">More Info</h6>
                         <ul>
-                            <li><a href="#profile">Group Profile</a></li>
-                            <li><a href="#vision">Vision & Values</a></li>
-                            <li><a href="#history">History</a></li>
-                            <li><a href="#leader">Leadership</a></li>
-                            <li><a href="#award">Awards</a></li>
-                            <li><a href="#media"> Media</a></li>
-                            <li><a href="#spotlight">Spotlight</a></li>
-                            <li><a href="#support"> Support</a></li>
+                            <li><a href="https://www.linkedin.com/company/first-global-data-corp/about/">Linkedin Profile</a></li>
+                            <li><a href="#about">About FGDC</a></li>
+                            <li><a href="mailto:harshal.galani@firstglobaldatacorp.com">Get a customized Quote</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="contact.php"> Support</a></li>
                         </ul>
 
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-7 footer-list-29 footer-4 mt-lg-0 mt-5">
-                        <h6 class="footer-title-29">Contact Info </h6>
-                        <p><strong>Address :</strong> Advisory Consutancy, 343 Honey Avenue street, NY - 62617.</p>
+                        <h6 class="footer-title-29">Contact FGDC </h6>
+                        <p><strong>Address :</strong> First Global Data Corp,LLC ,1712 Pioneer Ave, Suite 872 , Cheyenne, Wyoming 82001, United States</p>
                         <p class="my-2"><strong>Phone :</strong> <a href="tel:+12 23456799">+12 23456799</a></p>
-                        <p><strong>Email :</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><strong>Email :</strong> <a href="mailto:info@firstglobaldatacorp.com">info@firstglobaldatacorp.com</a></p>
 
-                        <div class="map-iframe-ft mt-4">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2spl!4v1562654563739!5m2!1sen!2spl"
-                                width="100%" height="400" frameborder="0" style="border: 0px;"
-                                allowfullscreen=""></iframe>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -258,15 +217,15 @@ Author URL: http://w3layouts.com
     <section class="w3l-copyright">
         <div class="container">
             <div class="row bottom-copies">
-                <p class="col-lg-8 copy-footer-29">© 2020 Advisory. All rights reserved. Design by <a
-                        href="https://w3layouts.com/" target="_blank">
-                        W3Layouts</a></p>
+                <p class="col-lg-8 copy-footer-29">© 2021 First Global Data Corp,LLC. All rights reserved. Website by <a
+                        href="https://www.freelancer.com/u/developer504" target="_blank">
+                        Vedaang Sharma</a></p>
 
                 <div class="col-lg-4 footer-list-29">
                     <ul class="d-flex text-lg-right">
-                        <li><a href="#careers"> Careers</a></li>
-                        <li class="mx-lg-5 mx-md-4 mx-3"><a href="#privacymy-lg-0 my-4">Privacy Policy</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="team.html">Careers</a></li>
+                        <li class="mx-lg-5 mx-md-4 mx-3"><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="contact.php">Contact us</a></li>
                     </ul>
                 </div>
 
