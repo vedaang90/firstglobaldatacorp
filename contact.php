@@ -29,17 +29,16 @@ echo "Thank You!";
 </head>
 
 <body>
-    <!--header-->
+     <!--header-->
     <header id="site-header" class="fixed-top">
-        <div class="container">
+      <div class="container">
             <nav class="navbar navbar-expand-lg stroke px-0">
-                <h1> <a class="navbar-brand" href="index.html">
-                        First Global Data Corp
-                    </a></h1>
-                <!-- if logo is image enable this   
+                <h1> <a class="navbar-brand" href="index.html">                   
+                    </a></h1>  
+               
     <a class="navbar-brand" href="#index.html">
-        <img src="assets/logo.png" alt="FGDC" title="FGDC" style="height:35px;" />
-    </a> -->
+        <img src="assets/logo.png" alt="FGDC" title="First Global Data Corp" style="height:70px;" />
+    </a>
                 <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
                     data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -140,13 +139,13 @@ echo "Thank You!";
                             </div>
                             <form action="" method="post">
                                 <div class="twice-two">
-                                    <input type="text" class="form-control" name="w3lName" id="name"
+                                    <input type="text" class="form-control" name="name" id="name"
                                         placeholder="Name" required="">
-                                    <input type="email" class="form-control" name="w3lSender" id="email"
+                                    <input type="email" class="form-control" name="email" id="email"
                                         placeholder="Email" required="">
                                 </div>
                                 
-                                <textarea name="w3lMessage" class="form-control" id="message" placeholder="Message"
+                                <textarea name="message" class="form-control" id="message" placeholder="Message"
                                     required=""></textarea>
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
