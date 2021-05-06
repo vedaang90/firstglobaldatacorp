@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 /*--
 Author: W3layouts
@@ -153,13 +153,13 @@ strong {
 }
 
 small {
-  font-size: 80%;
+  font-size: 70%;
 }
 
 sub,
 sup {
   position: relative;
-  font-size: 75%;
+  font-size: 65%;
   line-height: 0;
   vertical-align: baseline;
 }

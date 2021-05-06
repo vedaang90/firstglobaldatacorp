@@ -1,13 +1,3 @@
-﻿<?php $name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$formcontent="From: $name \n Message: $message";
-$recipient = "ved-win@protonmail.com";
-$subject = "Contact Form";
-$mailheader = "From: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
-echo "Thank You!";
-?>
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +15,8 @@ echo "Thank You!";
     <!--//google-fonts-->
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
-
+<link href="fcf-assets/css/fcf.default.css" rel="stylesheet">
+    <link href="fcf-assets/css/fcf.default-custom.css" rel="stylesheet">
 </head>
 
 <body>
@@ -137,25 +128,66 @@ echo "Thank You!";
                                 <div class="separatorhny"></div>
                                 <p class="mb-sm-5 mb-4">Our Helpful and Interactive Team will get back to you as soon as possible!</p>
                             </div>
-                            <form action="" method="post">
-                                <div class="twice-two">
-                                    <input type="text" class="form-control" name="name" id="name"
-                                        placeholder="Name" required="">
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        placeholder="Email" required="">
-                                </div>
-                                
-                                <textarea name="message" class="form-control" id="message" placeholder="Message"
-                                    required=""></textarea>
-                                <div class="text-right">
-                                    <button type="submit" class="btn btn-primary btn-style mt-4">Send Message</button>
+                            <div class="fcf-body">
+        <div class="fcf-form-wrap">
+            <div id="fcf-form">
+                <form class="fcf-form-class" method="post" action="fcf-assets/fcf.process.php">
+
+                    <div class="fcf-field">
+                        <label for="Name" class="fcf-label has-text-weight-normal">Your name</label>
+                        <div class="fcf-control">
+                            <input type="text" name="Name" id="Name" class="fcf-input is-full-width" maxlength="60"
+                                data-validate-field="Name">
+                        </div>
+                    </div>
+                    <div class="fcf-field">
+                        <label for="Email" class="fcf-label has-text-weight-normal">Your email address</label>
+                        <div class="fcf-control">
+                            <input type="email" name="Email" id="Email" class="fcf-input is-full-width" maxlength="100"
+                                data-validate-field="Email">
+                        </div>
+                    </div>
+                    <div class="fcf-field">
+                        <label for="Phone" class="fcf-label has-text-weight-normal">Your phone number (optional)</label>
+                        <div class="fcf-control">
+                            <input type="text" name="Phone" id="Phone" class="fcf-input is-full-width" maxlength="30"
+                                data-validate-field="Phone">
+                        </div>
+                    </div>
+                    <div class="fcf-field">
+                        <label for="Message" class="fcf-label has-text-weight-normal">Your message</label>
+                        <div class="fcf-control">
+                            <textarea name="Message" id="Message" class="fcf-textarea" maxlength="3000" rows="5"
+                                data-validate-field="Message"></textarea>
+                        </div>
+                    </div>
+                    <div id="fcf-status" class="fcf-status"></div>
+                    <div class="fcf-field">
+                        <div class="fcf-buttons">
+                            <button id="fcf-button" type="submit" class="fcf-button is-link is-medium is-fullwidth">Send
+                                Message</button>
+                        </div>
+                    </div>
+                    <!-- You MUST retain the attribution below -->
+                    
+                </form>
+            </div>
+            <div id="fcf-thank-you" style="display:none">
+                <!-- Thank you message goes below -->
+                <p>Thanks for contacting us, we will get back in touch with you soon.</p>
+                <!-- Thank you message goes above -->
+            </div>
+        </div>
+    </div>
+    <script src="fcf-assets/js/lang/fcf.en.js"></script>
+    <script src="fcf-assets/js/fcf.just-validate.min.js"></script>
+    <script src="fcf-assets/js/fcf.form.js"></script>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <div class="map-iframe"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.0607979570345!2d-104.82095208427856!3d41.13319871967665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876f3ac107440001%3A0x6f90c2d9c91f96fe!2sFirst%20Global%20Data%20Corp!5e0!3m2!1sen!2sin!4v1620020298186!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+                
 
             </div>
     </section>
